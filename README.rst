@@ -27,6 +27,6 @@ Running
 
 .. code-block:: console
 
-   $ docker run --name reanaio -d -p 80:80 reanahub/reanaio
-   $ firefox http://localhost/
+   $ docker run --name reanaio -d -p 8080:8080 reanahub/reanaio
+   $ firefox http://localhost:8080/
    $ docker stop reanaio && docker rm reanaio

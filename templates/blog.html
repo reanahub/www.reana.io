@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% set footer_style = 'dark' -%}
+
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/pagination.html" import render_pagination %}
+{% from "macros/lightbox.html" import include_lightbox %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <section class="section-content-white-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col block-center">
+          <div class="blog-post-list">
+            {% for post in this.pagination.items %}
+              {{ render_blog_post(post, from_index=true) }}
+            {% endfor %}
+          </div>
+          {% if this.pagination.pages > 1 %}
+            {{ render_pagination(this.pagination) }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ include_lightbox() }}
+{% endblock %}

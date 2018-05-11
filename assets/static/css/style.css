@@ -1,0 +1,357 @@
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #555F61;
+  font-weight: 300;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: #d71217;
+}
+a:hover,
+a:focus {
+  color: #FF5555;
+  text-decoration: none;
+}
+.centered {
+  margin: auto;
+  text-align: center;
+}
+.separator {
+  position: relative;
+  bottom: -60px;
+  text-align: center;
+  /*transform: translate(-50%, -50%);*/
+}
+.section-content-dark-bg,
+.section-content-white-bg {
+  padding-top: calc(3 * 30px);
+  padding-bottom: calc(3 * 30px);
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+}
+.section-content-dark-bg {
+  background-color: #a256511c;
+}
+.section-content-white-bg {
+  color: #333;
+}
+.section-content-dark-bg h3,
+.section-content-white-bg h3 {
+  color: #2D3E50;
+}
+.section-title-dark-bg,
+.section-title-white-bg {
+  font-size: 2.8em;
+  margin: 50px;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  color: #2D3E50;
+}
+@media (max-width: 768px) {
+  .section-title-dark-bg,
+  .section-title-white-bg {
+    font-size: 2em;
+  }
+}
+.vertical-center {
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+.top-navbar {
+  background-color: white;
+  color: #2c3e50;
+}
+.top-navbar-not-top {
+  z-index: 99;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+.intro-section {
+  text-align: center;
+}
+.headline img {
+  height: 8em;
+}
+.headline h6 {
+  margin-top: 20px;
+  font-size: 2.5em;
+  -webkit-font-smoothing: antialiased;
+  color: #2D3E50;
+}
+@media (max-width: 768px) {
+  .headline img {
+    height: 3em;
+  }
+}
+.features-section h3 {
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 20px;
+}
+.features-section img {
+  height: 80px;
+}
+.features-section div[class*="col-"] {
+  margin-top: 40px;
+}
+.fa-heart {
+  color: #fe3336;
+}
+.examples-section img {
+  /* adapt this number to smallest img in examples */
+  max-height: 234px;
+}
+.examples-section pre {
+  /* override prism.js margin-top */
+  margin-top: 0 !important;
+}
+.examples-section figure {
+  width: 100%;
+  background-color: white;
+  border: #fe333647 dotted 2px;
+  padding: 10px;
+}
+.examples-section figcaption {
+  padding-top: 15px;
+}
+.cl-example {
+  background-color: transparent !important;
+  height: 234px;
+  text-align: center;
+  padding-left: 55px;
+}
+.getstarted-section div[class*="col-"] {
+  padding-top: 30px;
+}
+.getstarted-section .figure {
+  width: 100%;
+}
+.documentation-section i {
+  padding-bottom: 30px;
+  color: #2d3e4f;
+}
+.documentation-section .col {
+  margin-bottom: 40px;
+}
+.contact-section {
+  text-align: center;
+}
+.contact-section .row {
+  align-items: center;
+}
+.contact-title {
+  padding-bottom: 30px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+.contact-list {
+  text-align: left;
+}
+.contact-list-header {
+  white-space: nowrap;
+  color: #2d3e4f;
+}
+.contact-list-header i {
+  width: 24px;
+}
+.contact-list td {
+  padding: 5px 30px 5px 0px;
+}
+.contact-reana-logo {
+  height: 5em;
+}
+@media (max-width: 1200px) {
+  .contact-reana-logo {
+    height: 3em;
+  }
+}
+@media (max-width: 766px) {
+  .contact-reana-logo {
+    display: none;
+  }
+}
+footer {
+  margin-top: auto;
+}
+.footer-bottom {
+  background-color: rgb(44, 62, 79);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  font-size: 14px;
+}
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
+.footer-bottom a:hover,
+.footer-bottom a:focus {
+  color: rgba(255, 255, 255, 0.58);
+}
+.numbering {
+  font-weight: 200;
+  font-size: 4em;
+  color: white;
+  background-color: #e211118f;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.flex-center-vertically {
+  display: flex;
+  text-align: center;
+  height: auto;
+  margin: 0 0 40px 0;
+}
+@media only screen and (min-device-width: 993px),
+only screen and (min-width: 993px) {
+  .flex-center-vertically {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-device-width: 992px),
+only screen and (max-width: 993px) {
+  .flex-center-vertically {
+    flex-direction: row;
+  }
+}
+/* Error page */
+
+.error-page {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.error-page .row {
+  display: flex;
+  align-items: center;
+}
+.error-page-title {
+  font-size: 2em;
+  padding: 90px;
+  -webkit-font-smoothing: antialiased;
+}
+.error-page-title a {
+  text-decoration: underline;
+}
+
+/* Blog */
+
+.post-header {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+}
+.blog-post-list .blog-post:not(:last-child) {
+  margin-bottom: 40px;
+}
+.post-header>p {
+  color: #333;
+}
+.post-header {
+  margin-bottom: 30px;
+}
+.post-header>h2>a,
+.post-header>h2 {
+  color: #2D3E50;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+.post-meta {
+  color: #777;
+  font-size: 0.9em;
+}
+.post-meta i {
+  color: #2D3E50;
+  padding-right: 5px;
+}
+.post-meta span {
+  margin-right: 20px;
+}
+.post-content {
+  margin-bottom: 30px;
+}
+.blog-post-frame {
+  border-radius: 4px;
+  -moz-box-shadow: 0px 1px 4px 0px rgba(25, 73, 97, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(25, 73, 97, 0.2);
+  padding: 40px;
+  background-color: white;
+}
+article {
+  display: block;
+  font-size: 1em;
+}
+
+article img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 25px;
+  color: rgb(135, 184, 208);
+  margin-top: 25px;
+}
+
+.pagination {
+  text-align: center;
+  padding-top: 40px;
+  display: inherit;
+}
+
+/* command-line */
+
+.command-line {
+  font-family: 'Inconsolata', monospace;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #eeeeee;
+  text-align: left;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+@media (max-width: 1200px) {
+  .command-line {
+    font-size: 0.5em;
+  }
+}
+.prompt {
+  color: #c57b4b !important;
+  padding-right: 5px;
+}
+.output {
+  padding-left: 15px;
+  color: grey;
+}
+.comment {
+  color: #7fa0a0;
+  font-style: italic;
+}
+.tab {
+  padding-left: 20px;
+}
+.tab-2x {
+  padding-left: 40px;
+}

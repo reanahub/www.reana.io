@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% set footer_style = 'dark' -%}
+
+{% block body %}
+    <div class="vertical-center">
+      <div class="container error-page">
+        <h3 class="error-page-title">Oops! The requested resource does not exist. You may want to go to the <a href="{{'/'|url}}">home page</a>.</h3>
+      </div>
+    </div>
+  </section>
+{% endblock %}

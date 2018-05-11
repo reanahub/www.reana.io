@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% set footer_style = 'dark' -%}
+
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/lightbox.html" import include_lightbox %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <section class="section-content-white-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col block-center">
+            {{ render_blog_post(this) }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ include_lightbox() }}
+{% endblock %}

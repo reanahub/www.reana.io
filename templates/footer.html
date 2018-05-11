@@ -1,0 +1,60 @@
+{% set footer_style = footer_style|default('white') -%}
+<footer>
+  <section class="contact-section section-content-{{footer_style}}-bg" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <a href="{{'/'|url}}"><img class="contact-reana-logo" src="/static/img/logo-reana.svg" /></a>
+        </div>
+        <div class="col-md-5 offset-md-2">
+          <h3 class="contact-title">Keep in touch</h3>
+          <table class="contact-list">
+            <tbody>
+              <tr>
+                <td class="contact-list-header"><i class="fab fa-twitter"></i> Twitter</td>
+                <td>
+                  <a href="https://twitter.com/reanahub">@reanahub</a> <span class="hidden-xs">&middot;</span> <a class="text-nowrap" href="https://twitter.com/reanahub/lists/reana-developers"> developers</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="contact-list-header"><i class="fab fa-github"></i> GitHub</td>
+                <td>
+                  <a href="https://github.com/reanahub">@reanahub</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="contact-list-header"><i class="fab fa-docker"></i> DockerHub</td>
+                <td>
+                  <a href="https://hub.docker.com/u/reanahub/">@reanahub</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="contact-list-header"><i class="fab fa-gitter"></i> Chat room</td>
+                <td>
+                  <a href="https://gitter.im/reanahub/reana"><img src="/static/img/gitter.svg"></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="contact-list-header"><i class="fas fa-book"></i> Docs</td>
+                <td><a href="https://reana.readthedocs.io/en/latest/">Read The Docs</a></td>
+              </tr>
+              <tr>
+                <td class="contact-list-header"><i class="far fa-envelope-open"></i> Email</td>
+                <td><a href="mailto:info@reanahub.io">info@reanahub.io</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col centered">
+          <span>Copyright © 2018 CERN. Icons by <a href="http://fontawesome.io/">Font Awesome</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

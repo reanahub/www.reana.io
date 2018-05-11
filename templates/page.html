@@ -1,0 +1,211 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block body %}
+<section class="intro-section">
+  <div class="vertical-center">
+    <div class="container">
+      <div class="row">
+        <div class="headline col">
+          <div><img src="/static/img/logo-reana.svg"></div>
+          <h6>Reproducible research data analysis platform</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="features-section section-content-white-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>Flexible</h3>
+        <p>
+          Run many computational workflow engines.
+        </p>
+        <a href="https://www.commonwl.org/"><img src="/static/img/logo-cwl.svg" title="Common Workflow Language" /></a>
+        <a href="https://github.com/yadage"><img src="/static/img/logo-yadage.png" title="Yadage" /></a>
+      </div>
+      <div class="col-md-3">
+        <h3>Scalable</h3>
+        <p>
+          Support for remote compute clouds.
+        </p>
+        <a href="https://kubernetes.io/"><img src="/static/img/logo-kubernetes.svg" title="Kubernetes" /></a>
+      </div>
+      <div class="col-md-3">
+        <h3>Reusable</h3>
+        <p>
+          Containerise once, reuse elsewhere. Cloud-native.
+        </p>
+        <a href="https://www.docker.com/"><img src="/static/img/logo-docker.svg" title="Docker" /></a>
+        <a href="https://singularity.lbl.gov/"><img src="/static/img/logo-singularity.svg" title="Singularity" /></a>
+      </div>
+      <div class="col-md-3">
+        <h3>Free</h3>
+        <p>
+          Free Software. MIT licence. Made with <i class="fa fa-heart"></i> at CERN.
+        </p>
+        <a href="https://home.cern"><img src="/static/img/logo-cern.png" title="CERN" /></a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="separator">
+  <img src="/static/img/separator.svg" />
+</div>
+<section class="examples-section section-content-dark-bg" id="examples">
+  <div class="container">
+    <span class="section-title-dark-bg">Examples</span>
+    <div class="row">
+      <div class="col-md-4">
+        <figure class="figure">
+          <div class="command-line cl-example">
+            <div class="line"><span class="prompt">$</span>cat inputs/names.txt</div>
+            <div class="line output">John Doe</div>
+            <div class="line output">Jane Doe</div>
+            <div class="line"><span class="prompt">$</span>reana-client workflow run</div>
+            <div class="line"><span class="prompt">$</span>cat outputs/greetings.txt</div>
+            <div class="line output">Hello John Doe!</div>
+            <div class="line output">Hello Jane Doe!</div>
+          </div>
+          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-helloworld/#reana-demo-example---hello-world">"Hello World" example</a></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img src="/static/img/example-jupyter.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-worldpopulation/#reusable-analysis-example---world-population">Jupyter notebook example</a</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="figure">
+          <img src="/static/img/example-root.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-root6-roofit/#reusable-analysis-example---root6-and-roofit">ROOT/RooFit physics analysis example</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="getstarted-section section-content-white-bg" id="getstarted">
+  <div class="container">
+    <span class="section-title-white-bg">Get Started</span>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="flex-center-vertically">
+          <div class="numbering">1</div>
+        </div>
+        <h3>Structure your analysis</h3>
+        <figure class="figure">
+          <div class="command-line">
+            <div class="line">version: 0.2.0</div>
+            <div class="line">code:</div>
+            <div class="line tab">files:</div>
+            <div class="line tab">- code/mycode.py</div>
+            <div class="line">inputs:</div>
+            <div class="line tab">files:</div>
+            <div class="line tab">- inputs/mydata.csv</div>
+            <div class="line tab">parameters:</div>
+            <div class="line tab-2x">myparameter: myvalue</div>
+            <div class="line">environments:</div>
+            <div class="line tab">- type: docker</div>
+            <div class="line tab-2x">image: johndoe/mypython:1.0</div>
+            <div class="line">workflow:</div>
+            <div class="line tab">type: cwl</div>
+            <div class="line tab">file: workflow/myworkflow.cwl</div>
+            <div class="line">outputs:</div>
+            <div class="line tab">files:</div>
+            <div class="line tab">-outputs/myplot.png</div>
+          </div>
+          <figcaption class="figure-caption text-center"><a href="http://reana.readthedocs.io/en/latest/userguide.html">more</a></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <div class="flex-center-vertically">
+          <div class="numbering">2</div>
+        </div>
+        <h3>Select a REANA cluster...</h3>
+        <figure class="figure">
+          <div class="command-line">
+            <div class="line"><span class="prompt">$</span>export REANA_SERVER_URL=https://reana.cern.ch/</div>
+          </div>
+        </figure>
+        <h3>...or install your own</h3>
+        <figure class="figure">
+          <div class="command-line">
+            <div class="line comment"># install kubectl 1.9.1 and minikube 0.23.0</div>
+            <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb minikube*.deb</div>
+            <div class="line"><span class="prompt">$</span>minikube start --kubernetes-version="v1.6.4"</div>
+            <div class="line comment"># install reana-cluster utility</div>
+            <div class="line"><span class="prompt">$</span>mkvirtualenv reana-cluster</div>
+            <div class="line"><span class="prompt">$</span>pip install reana-cluster</div>
+            <div class="line comment"># deploy new cluster and check progress</div>
+            <div class="line"><span class="prompt">$</span>reana-cluster init</div>
+            <div class="line"><span class="prompt">$</span>reana-cluster status</div>
+            <div class="line comment"># set environment variables for reana-client</div>
+            <div class="line"><span class="prompt">$</span>eval $(reana-cluster env)</div>
+          </div>
+          <figcaption class="figure-caption text-center"><a href="http://reana-client.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <div class="flex-center-vertically">
+          <div class="numbering">3</div>
+        </div>
+        <h3>Run your analysis</h3>
+        <figure class="figure">
+          <div class="command-line">
+            <div class="line comment"># install reana-client</div>
+            <div class="line"><span class="prompt">$</span>mkvirtualenv reana-client -p /usr/bin/python2.7</div>
+            <div class="line"><span class="prompt">$</span>pip install reana-client</div>
+            <div class="line"><span class="prompt">$</span>reana-client ping</div>
+            <div class="line comment"># create new workflow</div>
+            <div class="line"><span class="prompt">$</span>export REANA_WORKON=$(reana-client workflow create)</div>
+            <div class="line comment"># upload runtime code and inputs</div>
+            <div class="line"><span class="prompt">$</span>reana-client code upload ./code/*</div>
+            <div class="line"><span class="prompt">$</span>reana-client inputs upload ./inputs/*</div>
+            <div class="line comment"># start workflow and check progress</div>
+            <div class="line"><span class="prompt">$</span>reana-client workflow start</div>
+            <div class="line"><span class="prompt">$</span>reana-client workflow status</div>
+            <div class="line comment"># download outputs</div>
+            <div class="line"><span class="prompt">$</span>reana-client outputs list</div>
+            <div class="line"><span class="prompt">$</span>reana-client outputs download myplot.png</div>
+          </div>
+          <figcaption class="figure-caption text-center"><a href="http://reana-client.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="documentation-section section-content-dark-bg" id="documentation">
+  <div class="container">
+    <span class="section-title-dark-bg">Documentation</span>
+    <div class="row">
+      <div class="col">
+        <i class="fas fa-flask fa-5x"></i>
+        <h3>Researchers</h3>
+        <p>
+          Find out how you can use REANA to describe, run, preserve and reuse your analyses.
+        </p>
+        <a href="http://reana.readthedocs.io/en/latest/userguide.html">User Guide</a>
+      </div>
+      <div class="col">
+        <i class="fab fa-mixcloud fa-5x"></i>
+        <h3>Administrators</h3>
+        <p>
+          Install and manage the REANA reusable analysis platform on your own compute cloud.
+        </p>
+        <a href="http://reana.readthedocs.io/en/latest/administratorguide.html">Administrator Guide</a>
+      </div>
+      <div class="col">
+        <i class="fas fa-laptop fa-5x"></i>
+        <h3>Developers</h3>
+        <p>
+          Understand REANA source code, adapt it to your needs, contribute changes back.
+        </p>
+        <a href="http://reana.readthedocs.io/en/latest/developerguide.html">Developer Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -12,8 +12,8 @@ computational research data analysis workflows on remote containerised compute
 clouds. REANA was born to target the use case of particle physics analyses, but
 is applicable to any scientific discipline.
 
-
-This repository holds the REANA project web site.
+This repository holds the REANA project web site. It uses `Lektor
+<https://www.getlektor.com/>`_ static web site generator.
 
 Installation
 ------------

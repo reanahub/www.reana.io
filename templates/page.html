@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <div class="headline col">
-          <div><img src="/static/img/logo-reana.svg"></div>
+          <div><img src="{{ '/static/img/logo-reana.svg'|asseturl }}"></div>
           <h6>Reproducible research data analysis platform</h6>
         </div>
       </div>
@@ -23,36 +23,36 @@
         <p>
           Run many computational workflow engines.
         </p>
-        <a href="https://www.commonwl.org/"><img src="/static/img/logo-cwl.svg" title="Common Workflow Language" /></a>
-        <a href="https://github.com/yadage"><img src="/static/img/logo-yadage.png" title="Yadage" /></a>
+        <a href="https://www.commonwl.org/"><img src="{{ '/static/img/logo-cwl.svg'|asseturl }}" title="Common Workflow Language" /></a>
+        <a href="https://github.com/yadage"><img src="{{ '/static/img/logo-yadage.png'|asseturl }}" title="Yadage" /></a>
       </div>
       <div class="col-md-3">
         <h3>Scalable</h3>
         <p>
           Support for remote compute clouds.
         </p>
-        <a href="https://kubernetes.io/"><img src="/static/img/logo-kubernetes.svg" title="Kubernetes" /></a>
+        <a href="https://kubernetes.io/"><img src="{{ '/static/img/logo-kubernetes.svg'|asseturl }}" title="Kubernetes" /></a>
       </div>
       <div class="col-md-3">
         <h3>Reusable</h3>
         <p>
           Containerise once, reuse elsewhere. Cloud-native.
         </p>
-        <a href="https://www.docker.com/"><img src="/static/img/logo-docker.svg" title="Docker" /></a>
-        <a href="https://singularity.lbl.gov/"><img src="/static/img/logo-singularity.svg" title="Singularity" /></a>
+        <a href="https://www.docker.com/"><img src="{{ '/static/img/logo-docker.svg'|asseturl }}" title="Docker" /></a>
+        <a href="https://singularity.lbl.gov/"><img src="{{ '/static/img/logo-singularity.svg'|asseturl }}" title="Singularity" /></a>
       </div>
       <div class="col-md-3">
         <h3>Free</h3>
         <p>
           Free Software. MIT licence. Made with <i class="fa fa-heart"></i> at CERN.
         </p>
-        <a href="https://home.cern"><img src="/static/img/logo-cern.png" title="CERN" /></a>
+        <a href="https://home.cern"><img src="{{ '/static/img/logo-cern.png'|asseturl }}" title="CERN" /></a>
       </div>
     </div>
   </div>
 </section>
 <div class="separator">
-  <img src="/static/img/separator.svg" />
+  <img src="{{ '/static/img/separator.svg'|asseturl }}" />
 </div>
 <section class="examples-section section-content-dark-bg" id="examples">
   <div class="container">
@@ -74,13 +74,13 @@
       </div>
       <div class="col-md-4">
         <figure class="figure">
-          <img src="/static/img/example-jupyter.png" class="figure-img img-fluid rounded">
+          <img src="{{ '/static/img/example-jupyter.png'|asseturl }}" class="figure-img img-fluid rounded">
           <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-worldpopulation/#reusable-analysis-example---world-population">Jupyter notebook example</a</figcaption>
         </figure>
       </div>
       <div class="col-md-4">
         <figure class="figure">
-          <img src="/static/img/example-root.png" class="figure-img img-fluid rounded">
+          <img src="{{ '/static/img/example-root.png'|asseturl }}" class="figure-img img-fluid rounded">
           <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-root6-roofit/#reusable-analysis-example---root6-and-roofit">ROOT/RooFit physics analysis example</a></figcaption>
         </figure>
       </div>

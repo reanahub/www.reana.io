@@ -3,8 +3,7 @@
     ('examples', 'Examples', '/#examples'),
     ('getstarted', 'Get Started', '/#getstarted'),
     ('documentation', 'Documentation', '/#documentation'),
-    ('contact', 'Contact', '/#contact'),
-    ('blog', 'Blog', '/blog')
+    ('contact', 'Contact', '/#contact')
 ] -%}
 {% set active_page = active_page|default('home') -%}
 
@@ -12,7 +11,7 @@
   <nav class="navbar navbar-expand-lg fixed-top navbar-light top-navbar">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img src="/static/img/logo-reana.svg" height="30">
+        <img src="{{ '/static/img/logo-reana.svg'|asseturl }}" height="30">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#inv-navbar-collapse" aria-controls="inv-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

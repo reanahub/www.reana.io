@@ -22,7 +22,7 @@ a:focus {
 }
 .separator {
   position: relative;
-  bottom: -60px;
+  bottom: -59px;
   text-align: center;
   /*transform: translate(-50%, -50%);*/
 }
@@ -81,10 +81,10 @@ a:focus {
   text-align: center;
 }
 .headline img {
-  height: 8em;
+  height: 7em;
 }
 .headline h6 {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 2.5em;
   -webkit-font-smoothing: antialiased;
   color: #2D3E50;
@@ -93,6 +93,9 @@ a:focus {
   .headline img {
     height: 3em;
   }
+}
+.features-section {
+  padding: 0;
 }
 .features-section h3 {
   -webkit-font-smoothing: antialiased;

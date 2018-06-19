@@ -5,9 +5,10 @@ RUN apt-get -y update && \
     apt-get -y autoremove && \
     apt-get -y clean
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY requirements.txt /tmp
+RUN pip3 install -r /tmp/requirements.txt
 COPY . /code
 WORKDIR /code
-RUN pip3 install -r requirements.txt
 ENV LC_ALL=C.UTF-8
 RUN lektor build -O _build && \
     cp -a _build/* /usr/share/nginx/html/ && \

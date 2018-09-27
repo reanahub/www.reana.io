@@ -11,6 +11,9 @@ body {
 a {
   color: #d71217;
 }
+a img:hover {
+  opacity: 0.8;
+}
 a:hover,
 a:focus {
   color: #FF5555;
@@ -329,6 +332,11 @@ a:focus {
     display: none;
   }
 }
+@media (max-width: 766px) {
+  .contact-section .container {
+    margin-top: 0px;
+  }
+}
 
 /* Footer: */
 
@@ -350,6 +358,30 @@ footer {
 .footer-bottom a:hover,
 .footer-bottom a:focus {
   color: rgba(255, 255, 255, 0.58);
+}
+
+/* Collaborations section */
+
+.collaborations-block {
+  margin-top: 50px;
+}
+
+.collaborations-block .logo-collaborator-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.collaborations-block img {
+  height: 95px;
+  padding: 20px;
+}
+
+@media (max-width: 766px) {
+  .collaborations-block {
+    margin-bottom: 50px;
+  }
 }
 
 /* Error page: */

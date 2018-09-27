@@ -11,6 +11,9 @@ body {
 a {
   color: #d71217;
 }
+a img:hover {
+  opacity: 0.8;
+}
 a:hover,
 a:focus {
   color: #FF5555;
@@ -289,6 +292,21 @@ a:focus {
 .event-twitter-text {
   font-weight: 500;
 }
+
+/* Collaborations section */
+
+.collaborations-section div[class*="col-"] {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.collaborations-section img {
+  height: 130px;
+  padding: 20px;
+}
+.collaborations-section img[title="DIANA HEP"] {
+  border-radius: 50%;
+}
+
 
 /* Contact section: */
 

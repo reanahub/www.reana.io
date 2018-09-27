@@ -151,24 +151,19 @@
         <h3>Structure your analysis</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line">version: 0.2.0</div>
-            <div class="line">code:</div>
-            <div class="line tab">files:</div>
-            <div class="line tab">- code/mycode.py</div>
+            <div class="line">version: 0.3.0</div>
             <div class="line">inputs:</div>
             <div class="line tab">files:</div>
-            <div class="line tab">- inputs/mydata.csv</div>
+            <div class="line tab-2x">- code/mycode.py</div>
+            <div class="line tab-2x">- inputs/mydata.csv</div>
             <div class="line tab">parameters:</div>
             <div class="line tab-2x">myparameter: myvalue</div>
-            <div class="line">environments:</div>
-            <div class="line tab">- type: docker</div>
-            <div class="line tab-2x">image: johndoe/mypython:1.0</div>
             <div class="line">workflow:</div>
             <div class="line tab">type: cwl</div>
             <div class="line tab">file: workflow/myworkflow.cwl</div>
             <div class="line">outputs:</div>
             <div class="line tab">files:</div>
-            <div class="line tab">-outputs/myplot.png</div>
+            <div class="line tab-2x">- results/myplot.png</div>
           </div>
           <figcaption class="figure-caption text-center"><a href="http://reana.readthedocs.io/en/latest/userguide.html">more</a></figcaption>
         </figure>
@@ -181,14 +176,15 @@
         <figure class="figure">
           <div class="command-line">
             <div class="line"><span class="prompt">$</span>export REANA_SERVER_URL=https://reana.cern.ch/</div>
+            <div class="line"><span class="prompt">$</span>export REANA_ACCESS_TOKEN=XXXXXXX</div>
           </div>
         </figure>
         <h3>...or install your own</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line comment"># install kubectl 1.9.1 and minikube 0.23.0</div>
+            <div class="line comment"># install kubectl 1.11.2 and minikube 0.28.2</div>
             <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb minikube*.deb</div>
-            <div class="line"><span class="prompt">$</span>minikube start --kubernetes-version="v1.6.4"</div>
+            <div class="line"><span class="prompt">$</span>minikube start --kubernetes-version="v1.11.2"</div>
             <div class="line comment"># install reana-cluster utility</div>
             <div class="line"><span class="prompt">$</span>mkvirtualenv reana-cluster</div>
             <div class="line"><span class="prompt">$</span>pip install reana-cluster</div>
@@ -196,9 +192,9 @@
             <div class="line"><span class="prompt">$</span>reana-cluster init</div>
             <div class="line"><span class="prompt">$</span>reana-cluster status</div>
             <div class="line comment"># set environment variables for reana-client</div>
-            <div class="line"><span class="prompt">$</span>eval $(reana-cluster env)</div>
+            <div class="line"><span class="prompt">$</span>eval $(reana-cluster env --include-admin-token)</div>
           </div>
-          <figcaption class="figure-caption text-center"><a href="http://reana-client.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
+          <figcaption class="figure-caption text-center"><a href="http://reana-cluster.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
         </figure>
       </div>
       <div class="col-md-4">
@@ -208,21 +204,22 @@
         <h3>Run your analysis</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line comment"># install reana-client</div>
-            <div class="line"><span class="prompt">$</span>mkvirtualenv reana-client -p /usr/bin/python2.7</div>
+            <div class="line comment"># install REANA client</div>
+            <div class="line"><span class="prompt">$</span>mkvirtualenv reana-client</div>
             <div class="line"><span class="prompt">$</span>pip install reana-client</div>
-            <div class="line"><span class="prompt">$</span>reana-client ping</div>
             <div class="line comment"># create new workflow</div>
-            <div class="line"><span class="prompt">$</span>export REANA_WORKON=$(reana-client workflow create)</div>
-            <div class="line comment"># upload runtime code and inputs</div>
-            <div class="line"><span class="prompt">$</span>reana-client code upload ./code/*</div>
-            <div class="line"><span class="prompt">$</span>reana-client inputs upload ./inputs/*</div>
-            <div class="line comment"># start workflow and check progress</div>
-            <div class="line"><span class="prompt">$</span>reana-client workflow start</div>
-            <div class="line"><span class="prompt">$</span>reana-client workflow status</div>
-            <div class="line comment"># download outputs</div>
-            <div class="line"><span class="prompt">$</span>reana-client outputs list</div>
-            <div class="line"><span class="prompt">$</span>reana-client outputs download myplot.png</div>
+            <div class="line"><span class="prompt">$</span>reana-client create -n my-analysis</div>
+            <div class="line"><span class="prompt">$</span>export REANA_WORKON=my-analysis</div>
+            <div class="line comment"># upload input code and data to the workspace</div>
+            <div class="line"><span class="prompt">$</span>reana-client upload ./code ./data</div>
+            <div class="line comment"># start computational workflow</div>
+            <div class="line"><span class="prompt">$</span>reana-client start</div>
+            <div class="line comment"># check its progress</div>
+            <div class="line"><span class="prompt">$</span>reana-client status</div>
+            <div class="line comment"># list workspace files</div>
+            <div class="line"><span class="prompt">$</span>reana-client list</div>
+            <div class="line comment"># download output results</div>
+            <div class="line"><span class="prompt">$</span>reana-client download results/plot.png</div>
           </div>
           <figcaption class="figure-caption text-center"><a href="http://reana-client.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
         </figure>

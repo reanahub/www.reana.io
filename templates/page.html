@@ -57,53 +57,86 @@
 <section class="examples-section section-content-dark-bg" id="examples">
   <div class="container">
     <span class="section-title-dark-bg">Examples</span>
-    <div class="row">
-      <div class="col-md-4">
-        <figure class="figure">
-          <div class="command-line cl-example">
-            <div class="line"><span class="prompt">$</span>cat inputs/names.txt</div>
-            <div class="line output">John Doe</div>
-            <div class="line output">Jane Doe</div>
-            <div class="line"><span class="prompt">$</span>reana-client workflow run</div>
-            <div class="line"><span class="prompt">$</span>cat outputs/greetings.txt</div>
-            <div class="line output">Hello John Doe!</div>
-            <div class="line output">Hello Jane Doe!</div>
+    <div id="examples-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+              <figure class="figure">
+                <div class="command-line cl-example">
+                  <div class="line"><span class="prompt">$</span>cat inputs/names.txt</div>
+                  <div class="line output">Jane Doe</div>
+                  <div class="line output">Joe Bloggs</div>
+                  <div class="line"><span class="prompt">$</span>reana-client start</div>
+                  <div class="line"><span class="prompt">$</span>reana-client download</div>
+                  <div class="line"><span class="prompt">$</span>cat outputs/greetings.txt</div>
+                  <div class="line output">Hello Jane Doe!</div>
+                  <div class="line output">Hello Joe Bloggs!</div>
+                </div>
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-helloworld">"Hello world"</a></figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-jupyter.png'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-worldpopulation">Parametrised Jupyter notebook</a></figcaption>
+              </figure>
+            </div>
           </div>
-          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-helloworld">"Hello world" example</a></figcaption>
-        </figure>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-root.png'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-root6-roofit">ROOT/RooFit physics analysis</a></figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-bsm-search.png'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-bsm-search">ATLAS BSM search</a></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-lhcb-rare-charm-decay-search.jpg'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-lhcb-d2pimumu">LHCb rare charm decay search</a></figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-alice-lego-train-test-run.png'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-alice-lego-train-test-run">ALICE LEGO train test run</a></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-atlas-recast.png'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-atlas-recast">ATLAS RECAST</a></figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4">
+              <figure class="figure">
+                <img src="{{ '/static/img/example-cms-higgs-to-four-leptons.png'|asseturl }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-cms-h4l">CMS Higgs-to-four-leptons</a></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <figure class="figure">
-          <img src="{{ '/static/img/example-jupyter.png'|asseturl }}" class="figure-img img-fluid rounded">
-          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-worldpopulation">Jupyter notebook example</a></figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4">
-        <figure class="figure">
-          <img src="{{ '/static/img/example-root.png'|asseturl }}" class="figure-img img-fluid rounded">
-          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-root6-roofit">ROOT/RooFit physics analysis example</a></figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <figure class="figure">
-          <img src="{{ '/static/img/example-bsm-search.png'|asseturl }}" class="figure-img img-fluid rounded">
-          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-bsm-search">ATLAS BSM search example</a></figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4">
-        <figure class="figure">
-          <img src="{{ '/static/img/example-lhcb-rare-charm-decay-search.jpg'|asseturl }}" class="figure-img img-fluid rounded">
-          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-lhcb-d2pimumu">LHCb rare charm decay search example</a></figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4">
-        <figure class="figure">
-            <img src="{{ '/static/img/example-alice-lego-train-test-run.png'|asseturl }}" class="figure-img img-fluid rounded">
-          <figcaption class="figure-caption text-center"><a href="https://github.com/reanahub/reana-demo-alice-lego-train-test-run">ALICE LEGO train test run example</a></figcaption>
-        </figure>
-      </div>
+      <a class="carousel-control-prev" href="#examples-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#examples-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 </section>

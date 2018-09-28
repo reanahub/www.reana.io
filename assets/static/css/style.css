@@ -120,7 +120,19 @@ a:focus {
 
 .examples-section img {
   /* adapt this number to smallest img in examples */
-  max-height: 234px;
+  max-height: 220.78px;
+}
+@media (max-width: 1200px) {
+  .examples-section img {
+    /* adapt this number to smallest img in examples */
+    max-height: 177.31px;
+  }
+}
+@media (max-width: 992px) {
+  .examples-section img {
+    /* adapt this number to smallest img in examples */
+    max-height: 124px;
+  }
 }
 .examples-section pre {
   /* override prism.js margin-top */
@@ -132,14 +144,39 @@ a:focus {
   border: #fe333647 dotted 2px;
   padding: 10px;
 }
-.examples-section figcaption {
-  padding-top: 15px;
+@media (max-width: 766px) {
+  .examples-section figure {
+    /* Avoid carousel to place navigation arrows on top of the figures. */
+    margin-top: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .examples-section figure {
+    height: 206px;
+  }
 }
 .cl-example {
   background-color: transparent !important;
-  height: 234px;
+  height: 220.78px;
   text-align: center;
   padding-left: 55px;
+}
+@media (max-width: 1200px) {
+  .cl-example {
+    height: 177.31px;
+  }
+}
+@media (max-width: 992px) {
+  .cl-example {
+    height: 124px;
+  }
+}
+/* Arrow color modified inside SVG document fill='%23ff3336' where after %23 comes the HEX code of the color (RE)ANA red */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff3336' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff3336' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
 }
 
 /* Get Started section: */

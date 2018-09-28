@@ -221,7 +221,7 @@ a:focus {
   }
 }
 .release-news {
-  width: 60%;
+  width: 80%;
   display: inline-table;
   border: 1px solid #2d3e4e;
 }
@@ -233,10 +233,14 @@ a:focus {
   font-size: 0.8em;
   font-weight: 300;
   font-style: italic;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+}
+.release-news img {
+  width: 100%;
+  padding: 20px;
 }
 .release-news-body {
-  padding: 20px;
+  padding: 0px 25px;
 }
 .release-news-link {
   padding-top: 20px;

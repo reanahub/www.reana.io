@@ -2,6 +2,15 @@
  REANA
 =======
 
+.. image:: https://img.shields.io/travis/reanahub/reana.io.svg
+   :target: https://travis-ci.org/reanahub/reana.io
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :target: https://gitter.im/reanahub/reana?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+
+.. image:: https://img.shields.io/github/license/reanahub/reana.io.svg
+   :target: https://github.com/reanahub/reana.io/blob/master/COPYING
+
 About
 -----
 

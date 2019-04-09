@@ -190,8 +190,10 @@
             <div class="line"><span class="prompt">$</span>source ~/.virtualenvs/myreana/bin/activate</div>
             <div class="line comment"># install reana-cluster utility</div>
             <div class="line"><span class="prompt">$</span>pip install reana-cluster</div>
+            <div class="line comment"># deploy helm inside the Cluster</div>
+            <div class="line"><span class="prompt">$</span>helm init</div>
             <div class="line comment"># deploy new cluster and check progress</div>
-            <div class="line"><span class="prompt">$</span>reana-cluster init</div>
+            <div class="line"><span class="prompt">$</span>reana-cluster init --traefik</div>
             <div class="line"><span class="prompt">$</span>reana-cluster status</div>
             <div class="line comment"># set environment variables for reana-client</div>
             <div class="line"><span class="prompt">$</span>eval $(reana-cluster env --include-admin-token)</div>
@@ -221,7 +223,7 @@
             <div class="line comment"># check its progress</div>
             <div class="line"><span class="prompt">$</span>reana-client status</div>
             <div class="line comment"># list workspace files</div>
-            <div class="line"><span class="prompt">$</span>reana-client list</div>
+            <div class="line"><span class="prompt">$</span>reana-client ls</div>
             <div class="line comment"># download output results</div>
             <div class="line"><span class="prompt">$</span>reana-client download results/plot.png</div>
           </div>

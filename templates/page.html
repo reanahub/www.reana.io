@@ -194,7 +194,7 @@
             <div class="line comment"># deploy helm</div>
             <div class="line"><span class="prompt">$</span>helm init</div>
             <div class="line comment"># deploy new cluster and check progress</div>
-            <div class="line"><span class="prompt">$</span>reana-cluster init --traefik</div>
+            <div class="line"><span class="prompt">$</span>reana-cluster init --traefik --generate-db-secrets</div>
             <div class="line"><span class="prompt">$</span>reana-cluster status</div>
             <div class="line comment"># set environment variables for client</div>
             <div class="line"><span class="prompt">$</span>eval $(reana-cluster env --include-admin-token)</div>

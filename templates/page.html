@@ -182,7 +182,7 @@
         <h3>...or install your own</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line comment"># install kubectl 1.14.0, minikube 1.0.0 and helm 2.12.3</div>
+            <div class="line comment"># install kubectl 1.16.3, minikube 1.5.2 and helm 3.0.0</div>
             <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb minikube*.deb kubernetes-helm*.deb</div>
             <div class="line comment"># start minikube</div>
             <div class="line"><span class="prompt">$</span>minikube start --feature-gates="TTLAfterFinished=true"</div>
@@ -191,8 +191,6 @@
             <div class="line"><span class="prompt">$</span>source ~/.virtualenvs/myreana/bin/activate</div>
             <div class="line comment"># install reana-cluster utility</div>
             <div class="line"><span class="prompt">$</span>pip install reana-cluster</div>
-            <div class="line comment"># deploy helm</div>
-            <div class="line"><span class="prompt">$</span>helm init</div>
             <div class="line comment"># deploy new cluster and check progress</div>
             <div class="line"><span class="prompt">$</span>reana-cluster init --traefik --generate-db-secrets</div>
             <div class="line"><span class="prompt">$</span>reana-cluster status</div>

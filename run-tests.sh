@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t reanahub/reanaio .
+docker build -t reanahub/wwwreanaio .

@@ -2,14 +2,14 @@
  REANA
 =======
 
-.. image:: https://img.shields.io/travis/reanahub/reana.io.svg
-   :target: https://travis-ci.org/reanahub/reana.io
+.. image:: https://img.shields.io/travis/reanahub/www.reana.io.svg
+   :target: https://travis-ci.org/reanahub/www.reana.io
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/reanahub/reana?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
 
-.. image:: https://img.shields.io/github/license/reanahub/reana.io.svg
-   :target: https://github.com/reanahub/reana.io/blob/master/LICENSE
+.. image:: https://img.shields.io/github/license/reanahub/www.reana.io.svg
+   :target: https://github.com/reanahub/www.reana.io/blob/master/LICENSE
 
 About
 -----
@@ -29,13 +29,13 @@ Installation
 
 .. code-block:: console
 
-   $ docker build -t reanahub/reanaio .
+   $ docker build -t reanahub/wwwreanaio .
 
 Running
 -------
 
 .. code-block:: console
 
-   $ docker run --name reanaio -d -p 8080:8080 reanahub/reanaio
+   $ docker run --name wwwreanaio -d -p 8080:8080 reanahub/wwwreanaio
    $ firefox http://localhost:8080/
-   $ docker stop reanaio && docker rm reanaio
+   $ docker stop wwwreanaio && docker rm wwwreanaio

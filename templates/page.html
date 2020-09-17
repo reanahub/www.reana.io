@@ -165,7 +165,7 @@
             <div class="line tab">files:</div>
             <div class="line tab-2x">- results/myplot.png</div>
           </div>
-          <figcaption class="figure-caption text-center"><a href="http://reana.readthedocs.io/en/latest/userguide.html">more</a></figcaption>
+          <figcaption class="figure-caption text-center"><a href="http://docs.reana.io/reference/reana-yaml/">more</a></figcaption>
         </figure>
       </div>
       <div class="col-md-4">
@@ -182,22 +182,20 @@
         <h3>...or install your own</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line comment"># install kubectl 1.16.3, minikube 1.5.2 and helm 3.0.0</div>
-            <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb minikube*.deb kubernetes-helm*.deb</div>
-            <div class="line comment"># start minikube</div>
-            <div class="line"><span class="prompt">$</span>minikube start --feature-gates="TTLAfterFinished=true"</div>
-            <div class="line comment"># create new virtual environment</div>
-            <div class="line"><span class="prompt">$</span>virtualenv ~/.virtualenvs/myreana</div>
-            <div class="line"><span class="prompt">$</span>source ~/.virtualenvs/myreana/bin/activate</div>
-            <div class="line comment"># install reana-cluster utility</div>
-            <div class="line"><span class="prompt">$</span>pip install reana-cluster</div>
-            <div class="line comment"># deploy new cluster and check progress</div>
-            <div class="line"><span class="prompt">$</span>reana-cluster init</div>
-            <div class="line"><span class="prompt">$</span>reana-cluster status</div>
-            <div class="line comment"># set environment variables for client</div>
-            <div class="line"><span class="prompt">$</span>eval $(reana-cluster env --include-admin-token)</div>
+            <div class="line comment"># install kubectl 1.16+, kind 0.8+ and helm 3.0+</div>
+            <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb kind*.deb kubernetes-helm*.deb</div>
+            <div class="line comment"># create Kubernetes cluster (or use your own!)</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/0.7.0/etc/kind-localhost-30443.yaml</div>
+            <div class="line"><span class="prompt">$</span>kind create cluster --config kind-localhost-30443.yaml</div>
+            <div class="line comment"># deploy REANA using Helm</div>
+            <div class="line"><span class="prompt">$</span>helm repo add reanahub https://reanahub.github.io/reana</div>
+            <div class="line"><span class="prompt">$</span>helm repo update</div>
+            <div class="line"><span class="prompt">$</span>helm install reana reanahub/reana --wait</div>
+            <div class="line comment"># create an admin user</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/0.7.0/scripts/create-admin-user.sh</div>
+            <div class="line"><span class="prompt">$</span>sh create-admin-user.sh default reana john.doe@example.org mysecretpassword</div>
           </div>
-          <figcaption class="figure-caption text-center"><a href="http://reana-cluster.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
+          <figcaption class="figure-caption text-center"><a href="http://docs.reana.io/development/deploying-locally/">more</a></figcaption>
         </figure>
       </div>
       <div class="col-md-4">
@@ -228,7 +226,7 @@
             <div class="line comment"># download output results</div>
             <div class="line"><span class="prompt">$</span>reana-client download results/plot.png</div>
           </div>
-          <figcaption class="figure-caption text-center"><a href="http://reana-client.readthedocs.io/en/latest/gettingstarted.html">more</a></figcaption>
+          <figcaption class="figure-caption text-center"><a href="http://docs.reana.io/getting-started/first-example/">more</a></figcaption>
         </figure>
       </div>
     </div>
@@ -244,7 +242,7 @@
         <p>
           Find out how you can use REANA to describe, run, preserve and reuse your analyses.
         </p>
-        <a href="http://reana.readthedocs.io/en/latest/userguide.html">User Guide</a>
+        <a href="http://docs.reana.io/getting-started/">User Guide</a>
       </div>
       <div class="col">
         <i class="fab fa-mixcloud fa-5x"></i>
@@ -252,7 +250,7 @@
         <p>
           Install and manage the REANA reusable analysis platform on your own compute cloud.
         </p>
-        <a href="http://reana.readthedocs.io/en/latest/administratorguide.html">Administrator Guide</a>
+        <a href="http://docs.reana.io/development/">Administrator Guide</a>
       </div>
       <div class="col">
         <i class="fas fa-laptop fa-5x"></i>
@@ -260,7 +258,7 @@
         <p>
           Understand REANA source code, adapt it to your needs, contribute changes back.
         </p>
-        <a href="http://reana.readthedocs.io/en/latest/developerguide.html">Developer Guide</a>
+        <a href="http://docs.reana.io/development/">Developer Guide</a>
       </div>
     </div>
   </div>

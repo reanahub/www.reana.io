@@ -500,7 +500,7 @@ article img {
   text-align: left;
   word-spacing: normal;
   word-wrap: normal;
-  word-break: normal;
+  word-break: break-word;
   border-radius: 5px;
   font-size: 0.8em;
 }

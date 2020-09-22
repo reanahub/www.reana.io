@@ -11,5 +11,8 @@ python:
 services:
   - docker
 
+before_script:
+  - gem install awesome_bot
+
 script:
   - ./run-tests.sh

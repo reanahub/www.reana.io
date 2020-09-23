@@ -29,7 +29,8 @@ a:focus {
   text-align: center;
 }
 .section-content-dark-bg,
-.section-content-white-bg {
+.section-content-white-bg,
+.section-content-light-bg {
   padding-top: calc(3 * 30px);
   padding-bottom: calc(3 * 30px);
   font-size: 1.2em;
@@ -42,8 +43,14 @@ a:focus {
 .section-content-white-bg {
   color: #333;
 }
+
+.section-content-light-bg {
+  background-color: #e2a39f14;
+}
+
 .section-content-dark-bg h3,
-.section-content-white-bg h3 {
+.section-content-white-bg h3,
+.section-content-light-bg h3 {
   color: #2D3E50;
 }
 .section-title-dark-bg,
@@ -291,6 +298,17 @@ a:focus {
 }
 .event-twitter-text {
   font-weight: 500;
+}
+
+/* Roadmap section */
+
+.roadmap-section .card {
+  margin-bottom: 1em;
+  border-top: 5px solid #f5ecec;
+}
+
+.roadmap-section .card-body .card-text {
+  margin-bottom: 0;
 }
 
 /* Contact section: */

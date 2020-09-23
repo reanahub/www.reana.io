@@ -54,7 +54,7 @@
 <div class="separator">
   <img src="{{ '/static/img/separator.svg'|asseturl }}" />
 </div>
-<section class="examples-section section-content-dark-bg" id="examples">
+<section class="examples-section section-content-light-bg" id="examples">
   <div class="container">
     <span class="section-title-dark-bg">Examples</span>
     <div id="examples-carousel" class="carousel slide" data-ride="carousel">
@@ -140,7 +140,7 @@
     </div>
   </div>
 </section>
-<section class="getstarted-section section-content-white-bg" id="getstarted">
+<section class="getstarted-section section-content-dark-bg" id="getstarted">
   <div class="container">
     <span class="section-title-white-bg">Get started</span>
     <div class="row">
@@ -234,7 +234,7 @@
     </div>
   </div>
 </section>
-<section class="documentation-section section-content-dark-bg" id="documentation">
+<section class="documentation-section section-content-light-bg" id="documentation">
   <div class="container">
     <span class="section-title-dark-bg">Documentation</span>
     <div class="row">
@@ -319,6 +319,89 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="roadmap-section section-content-light-bg" id="roadmap">
+  <div class="container">
+    <span class="section-title-white-bg">Roadmap</span>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Current</h3>
+        <p>
+          What we work on now
+        </p>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/orgs/reanahub/projects/33" class="card-link">
+                REANA v0.7.0
+              </a>
+            </h5>
+            <p class="card-text">
+              Prepare new Helm-based REANA 0.7.0 release.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/orgs/reanahub/projects/34" class="card-link">
+                User quotas
+              </a>
+            </h5>
+            <p class="card-text">
+              Collect CPU and HDD consumption information for users running notebooks and workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>Near-term</h3>
+        <p>
+          What we plan to work on next
+        </p>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Live logs</h5>
+            <p class="card-text">
+              Introduce live job log streaming for CLI and Web UI.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">LHC community</h5>
+            <p class="card-text">
+              Introduce abstract dataset concept to handle a set of related files.
+            </p>
+            <p class="card-text">
+              Use various remote storage backends for workflow workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>Future</h3>
+        <p>
+          What is coming later
+        </p>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Abstraction of data storage</h5>
+            <p class="card-text">
+              Use various remote storage backends for workflow workspace.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">User groups and authorisations</h5>
+            <p class="card-text">Introduce OpenID Connect to support more authentication mechanisms.</p>
+            <p class="card-text">Introduce user groups and role-based authorisation control models.</p>
+          </div>
         </div>
       </div>
     </div>

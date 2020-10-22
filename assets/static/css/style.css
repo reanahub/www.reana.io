@@ -496,7 +496,7 @@ article img {
   font-family: 'Inconsolata', monospace;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #eeeeee;
+  background-color: #f5f5f5;
   text-align: left;
   word-spacing: normal;
   word-wrap: normal;
@@ -504,6 +504,11 @@ article img {
   border-radius: 5px;
   font-size: 0.8em;
 }
+
+.command-line:not(.cl-example) {
+  border: 1px solid #a256512b;
+}
+
 @media (max-width: 1200px) {
   .command-line {
     font-size: 0.5em;

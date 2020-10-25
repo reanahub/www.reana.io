@@ -185,14 +185,16 @@
             <div class="line comment"># install kubectl 1.16+, kind 0.8+ and helm 3.0+</div>
             <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb kind*.deb kubernetes-helm*.deb</div>
             <div class="line comment"># create Kubernetes cluster (or use your own!)</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/0.7.0/etc/kind-localhost-30443.yaml</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.7/etc/kind-localhost-30443.yaml</div>
             <div class="line"><span class="prompt">$</span>kind create cluster --config kind-localhost-30443.yaml</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.7/scripts/prefetch-images.sh</div>
+            <div class="line"><span class="prompt">$</span>sh prefetch-images.sh</div>
             <div class="line comment"># deploy REANA using Helm</div>
             <div class="line"><span class="prompt">$</span>helm repo add reanahub https://reanahub.github.io/reana</div>
             <div class="line"><span class="prompt">$</span>helm repo update</div>
             <div class="line"><span class="prompt">$</span>helm install reana reanahub/reana --wait</div>
             <div class="line comment"># create an admin user</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/0.7.0/scripts/create-admin-user.sh</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.7/scripts/create-admin-user.sh</div>
             <div class="line"><span class="prompt">$</span>sh create-admin-user.sh default reana john.doe@example.org mysecretpassword</div>
           </div>
           <figcaption class="figure-caption text-center"><a href="http://docs.reana.io/development/deploying-locally/">more</a></figcaption>

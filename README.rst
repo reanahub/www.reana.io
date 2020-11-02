@@ -2,8 +2,8 @@
  REANA
 =======
 
-.. image:: https://img.shields.io/travis/reanahub/www.reana.io.svg
-   :target: https://travis-ci.org/reanahub/www.reana.io
+.. image:: https://github.com/reanahub/www.reana.io/workflows/CI/badge.svg
+   :target: https://github.com/reanahub/www.reana.io/actions
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/reanahub/reana?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge

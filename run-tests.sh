@@ -23,6 +23,10 @@ check_docstyle () {
     awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch -- templates/**/*.html
 }
 
+check_dockerfile () {
+    docker run -i --rm hadolint/hadolint < Dockerfile
+}
+
 check_docker_build () {
     docker build -t reanahub/wwwreanaio .
 }
@@ -30,6 +34,7 @@ check_docker_build () {
 check_all () {
     check_script
     check_docstyle
+    check_dockerfile
     check_docker_build
 }
 
@@ -43,6 +48,7 @@ do
     case $arg in
         --check-shellscript) check_script;;
         --check-docstyle) check_docstyle;;
+        --check-dockerfile) check_dockerfile;;
         --check-docker-build) check_docker_build;;
         *)
     esac

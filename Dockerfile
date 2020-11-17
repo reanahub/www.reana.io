@@ -1,9 +1,11 @@
 FROM nginx:1.13
 EXPOSE 8080
+# hadolint ignore=DL3008, DL3015
 RUN apt-get -y update && \
     apt-get -y install python3-pip && \
     apt-get -y autoremove && \
-    apt-get -y clean
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY requirements.txt /tmp
 RUN pip3 install -r /tmp/requirements.txt

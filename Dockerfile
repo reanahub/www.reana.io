@@ -1,4 +1,4 @@
-FROM nginx:1.13
+FROM nginx:1.18
 EXPOSE 8080
 # hadolint ignore=DL3008, DL3015
 RUN apt-get -y update && \

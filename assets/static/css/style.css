@@ -119,6 +119,16 @@ a:focus {
 .features-section img {
   height: 80px;
 }
+.features-section .scalable-section img {
+  height: 75px;
+}
+.features-section .scalable-section .htcondor {
+  width: 85px;
+  height: auto;
+}
+.features-section .scalable-section .slurm {
+  height: 67px;
+}
 .features-section div[class*="col-"] {
   margin-top: 40px;
 }

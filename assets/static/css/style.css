@@ -119,6 +119,9 @@ a:focus {
 .features-section img {
   height: 80px;
 }
+.features-section .flexible-section img {
+  height: 65px;
+}
 .features-section .scalable-section img {
   height: 75px;
 }

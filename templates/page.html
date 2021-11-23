@@ -154,7 +154,7 @@
         <h3>Structure your analysis</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line">version: 0.7.4</div>
+            <div class="line">version: 0.8.0</div>
             <div class="line">inputs:</div>
             <div class="line tab">files:</div>
             <div class="line tab-2x">- code/mycode.py</div>
@@ -185,19 +185,19 @@
         <h3>...or install your own</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line comment"># install kubectl 1.16+, kind 0.8+ and helm 3.0+</div>
+            <div class="line comment"># install kubectl 1.19+, kind 0.9+ and helm 3.0+</div>
             <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb kind*.deb kubernetes-helm*.deb</div>
             <div class="line comment"># create Kubernetes cluster (or use your own!)</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.7/etc/kind-localhost-30443.yaml</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.8/etc/kind-localhost-30443.yaml</div>
             <div class="line"><span class="prompt">$</span>kind create cluster --config kind-localhost-30443.yaml</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.7/scripts/prefetch-images.sh</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.8/scripts/prefetch-images.sh</div>
             <div class="line"><span class="prompt">$</span>sh prefetch-images.sh</div>
             <div class="line comment"># deploy REANA using Helm</div>
             <div class="line"><span class="prompt">$</span>helm repo add reanahub https://reanahub.github.io/reana</div>
             <div class="line"><span class="prompt">$</span>helm repo update</div>
             <div class="line"><span class="prompt">$</span>helm install reana reanahub/reana --wait</div>
             <div class="line comment"># create an admin user</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.7/scripts/create-admin-user.sh</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.8/scripts/create-admin-user.sh</div>
             <div class="line"><span class="prompt">$</span>sh create-admin-user.sh default reana john.doe@example.org mysecretpassword</div>
           </div>
           <figcaption class="figure-caption text-center"><a href="https://docs.reana.io/administration/deployment/deploying-locally/">more</a></figcaption>
@@ -276,12 +276,12 @@
         <div class="release-news">
           <img src="{{ '/static/img/release.png'|asseturl }}" />
           <div class="release-news-body">
-            <h3>REANA 0.7.4</h3>
-            <h6>07 July 2021</h6>
-            <p>
-              Allows to specify memory limits for Kubernetes compute backend jobs. Improves workflow validation of input parameters and environment images.
-            </p>
-            <p class="release-news-link"><a href="https://github.com/reanahub/reana/releases/tag/0.7.4">See full release notes</a></p>
+            <h3>REANA 0.8.0</h3>
+            <h6>30 Nov 2021</h6>
+            <p>Introduces support for running Snakemake workflows.</p>
+            <p>Improves cluster performance when running multiple parallel workflows.</p>
+            <p>Enables administrators to configure CPU and Disk user quotas.</p>
+            <p class="release-news-link"><a href="https://github.com/reanahub/reana/releases/tag/0.8.0">See full release notes</a></p>
         </div>
         </div>
       </div>
@@ -345,24 +345,11 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="https://github.com/orgs/reanahub/projects/38" class="card-link">
-                Snakemake integration
-              </a>
+              Workflow scalability
             </h5>
             <p class="card-text">
-              Integrate <a href="https://snakemake.github.io/">Snakemake</a> as a new supported workflow engine.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://github.com/orgs/reanahub/projects/35" class="card-link">
-                Live logs
-              </a>
-            </h5>
-            <p class="card-text">
-              Introduce live job log streaming for CLI and Web UI.
+              Run hundreds of workflows on REANA in parallel as fast as possible.
+              Introduce basic features for many-workflows-friendly output inspection and sharing.
             </p>
           </div>
         </div>
@@ -372,14 +359,6 @@
         <p>
           What we plan to work on next
         </p>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Abstraction of data storage</h5>
-            <p class="card-text">
-              Use various remote storage backends for workflow workspace.
-            </p>
-          </div>
-        </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">LHC community</h5>
@@ -402,6 +381,18 @@
             <h5 class="card-title">User groups and authorisations</h5>
             <p class="card-text">Introduce OpenID Connect to support more authentication mechanisms.</p>
             <p class="card-text">Introduce user groups and role-based authorisation control models.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://github.com/orgs/reanahub/projects/35" class="card-link">
+                Live logs
+              </a>
+            </h5>
+            <p class="card-text">
+              Introduce live job log streaming for CLI and Web UI.
+            </p>
           </div>
         </div>
       </div>

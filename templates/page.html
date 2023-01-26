@@ -226,7 +226,7 @@
         <h3>Structure your analysis</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line">version: 0.8.1</div>
+            <div class="line">version: 0.9.0</div>
             <div class="line">inputs:</div>
             <div class="line tab">files:</div>
             <div class="line tab-2x">- code/mycode.py</div>
@@ -260,16 +260,16 @@
             <div class="line comment"># install kubectl 1.19+, kind 0.9+ and helm 3.0+</div>
             <div class="line"><span class="prompt">$</span>sudo dpkg -i kubectl*.deb kind*.deb kubernetes-helm*.deb</div>
             <div class="line comment"># create Kubernetes cluster (or use your own!)</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.8/etc/kind-localhost-30443.yaml</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.9/etc/kind-localhost-30443.yaml</div>
             <div class="line"><span class="prompt">$</span>kind create cluster --config kind-localhost-30443.yaml</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.8/scripts/prefetch-images.sh</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.9/scripts/prefetch-images.sh</div>
             <div class="line"><span class="prompt">$</span>sh prefetch-images.sh</div>
             <div class="line comment"># deploy REANA using Helm</div>
             <div class="line"><span class="prompt">$</span>helm repo add reanahub https://reanahub.github.io/reana</div>
             <div class="line"><span class="prompt">$</span>helm repo update</div>
             <div class="line"><span class="prompt">$</span>helm install reana reanahub/reana --wait</div>
             <div class="line comment"># create an admin user</div>
-            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.8/scripts/create-admin-user.sh</div>
+            <div class="line"><span class="prompt">$</span>wget https://raw.githubusercontent.com/reanahub/reana/maint-0.9/scripts/create-admin-user.sh</div>
             <div class="line"><span class="prompt">$</span>sh create-admin-user.sh default reana john.doe@example.org mysecretpassword</div>
           </div>
           <figcaption class="figure-caption text-center"><a href="https://docs.reana.io/administration/deployment/deploying-locally/">more</a></figcaption>
@@ -348,12 +348,12 @@
         <div class="release-news">
           <img src="{{ '/static/img/release.png'|asseturl }}" />
           <div class="release-news-body">
-            <h3>REANA 0.8.1</h3>
-            <h6>15 Feb 2022</h6>
-            <p>Introduces custom job timeout limits for user workflows.</p>
-            <p>Allows searching workspace files by name and visualising HTML reports.</p>
-            <p>Improves Cluster Health status web page indicating cluster availability.</p>
-            <p class="release-news-link"><a href="https://github.com/reanahub/reana/releases/tag/0.8.1">See full release notes</a></p>
+            <h3>REANA 0.9.0</h3>
+            <h6>26 Jan 2023</h6>
+            <p>Introduces support for launching workflows from external sources.</p>
+            <p>Allows defining custom retention rules to automatically delete workspace files.</p>
+            <p>Improves Kerberos authentication and adds support for Rucio.</p>
+            <p class="release-news-link"><a href="https://github.com/reanahub/reana/releases/tag/0.9.0">See full release notes</a></p>
         </div>
         </div>
       </div>
@@ -419,10 +419,10 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="https://github.com/orgs/reanahub/projects/47" class="card-link">Workflow launcher</a>
+              <a href="https://github.com/orgs/reanahub/projects/50" class="card-link">Workspace file retention</a>
             </h5>
             <p class="card-text">
-              Launch workflows from external sources such as source code repositories (GitHub, GitLab), digital repositories (Zenodo), or simply other locations on the web (generic URL) via "Launch-on-REANA" badges. <a href="https://blog.reana.io/posts/2022/launching-workflows/">[blog post]</a>
+              Introduce user-configurable workspace file retention policy allowing to specify that some files are to be deleted automatically 1 day after workflow finishes, other files retained for 356 days, etc. <a href="https://github.com/reanahub/reana-client/issues/610">[rfc]</a>
             </p>
           </div>
         </div>
@@ -432,10 +432,11 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="https://github.com/orgs/reanahub/projects/50" class="card-link">Workspace file retention</a>
+              <a href="https://github.com/reanahub/reana-client-go" class="card-link">Go client and stable API</a>
             </h5>
             <p class="card-text">
-                Introduce user-configurable workspace file retention policy allowing to specify that some files are to be deleted automatically 1 day after workflow finishes, other files retained for 356 days, etc. <a href="https://github.com/reanahub/reana-client/issues/610">[rfc]</a>
+              Introduce new command-line client written in Go, to improve performance and ease of use. At the same time, stabilise the REST API versioning for future evolution.
+            </p>
           </div>
         </div>
       </div>

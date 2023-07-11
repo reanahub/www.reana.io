@@ -29,13 +29,13 @@ Installation
 
 .. code-block:: console
 
-   $ docker build -t reanahub/wwwreanaio .
+   $ docker build -t docker.io/reanahub/wwwreanaio .
 
 Running
 -------
 
 .. code-block:: console
 
-   $ docker run --name wwwreanaio -d -p 8080:8080 reanahub/wwwreanaio
+   $ docker run --name wwwreanaio -d -p 8080:8080 docker.io/reanahub/wwwreanaio
    $ firefox http://localhost:8080/
    $ docker stop wwwreanaio && docker rm wwwreanaio

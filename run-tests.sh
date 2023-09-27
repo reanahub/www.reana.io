@@ -20,7 +20,7 @@ check_script () {
 }
 
 check_docstyle () {
-    awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch,https://twitter.com/reanahub/lists/reana-developers,https://gitter.im/reanahub/reana -- templates/**/*.html
+    awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch,https://twitter.com/reanahub/lists/reana-developers,https://gitter.im/reanahub/reana,https://indico.ific.uv.es -- templates/**/*.html
 }
 
 check_dockerfile () {

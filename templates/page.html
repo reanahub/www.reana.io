@@ -226,7 +226,6 @@
         <h3>Structure your analysis</h3>
         <figure class="figure">
           <div class="command-line">
-            <div class="line">version: 0.9.0</div>
             <div class="line">inputs:</div>
             <div class="line tab">files:</div>
             <div class="line tab-2x">- code/mycode.py</div>
@@ -348,12 +347,12 @@
         <div class="release-news">
           <img src="{{ '/static/img/release.png'|asseturl }}" />
           <div class="release-news-body">
-            <h3>REANA 0.9.0</h3>
-            <h6>26 Jan 2023</h6>
-            <p>Introduces support for launching workflows from external sources.</p>
-            <p>Allows defining custom retention rules to automatically delete workspace files.</p>
-            <p>Improves Kerberos authentication and adds support for Rucio.</p>
-            <p class="release-news-link"><a href="https://github.com/reanahub/reana/releases/tag/0.9.0">See full release notes</a></p>
+            <h3>REANA 0.9.1</h3>
+            <h6>28 Sep 2023</h6>
+            <p>Visualise PDF and ROOT files in the web interface.</p>
+            <p>Use Keycloak for user authentication.</p>
+            <p>Numerous improvements to cluster performance.</p>
+            <p class="release-news-link"><a href="https://github.com/reanahub/reana/releases/tag/0.9.1">See full release notes</a></p>
         </div>
         </div>
       </div>
@@ -361,6 +360,30 @@
         <div class="events-list-container">
           <table class="events-list">
             <tbody>
+              <tr>
+                <td class="events-list-header"><i class="fab fa-slideshare event-conference"></i></td>
+                <td>
+                  REANA participates at the HSF Analysis Preservation Bootcamp, October 16-18 2023, Valencia, Spain. <a href="https://indico.ific.uv.es/event/6964">[event]</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="events-list-header"><i class="fab fa-slideshare event-conference"></i></td>
+                <td>
+                  REANA participates at the CERN-NASA Open Science Summit 2023, July 10-14 2023, Geneva, Switzerland. <a href="https://indico.cern.ch/event/1254282/">[event]</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="events-list-header"><i class="fab fa-slideshare event-conference"></i></td>
+                <td>
+                  REANA participates at the CHEP2023 conference, May 8-12 2023, Norfolk, USA. <a href="https://www.jlab.org/conference/CHEP2023">[event]</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="events-list-header"><i class="fab fa-slideshare event-conference"></i></td>
+                <td>
+                  REANA participates at the PV2023 conference, May 2-4 2023, Geneva, Switzerland. <a href="https://indico.cern.ch/event/1188041/">[event]</a> <a href="https://indico.cern.ch/event/1188041/contributions/5309206/attachments/2636969/4562324/1-mecionis-facilitating-future-data-reuse_ulhgy.pdf">[slides]</a>
+                </td>
+              </tr>
               <tr>
                 <td class="events-list-header"><i class="fab fa-slideshare event-conference"></i></td>
                 <td>
@@ -419,10 +442,10 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="https://github.com/orgs/reanahub/projects/50" class="card-link">Workspace file retention</a>
+              Workflow sharing
             </h5>
             <p class="card-text">
-              Introduce user-configurable workspace file retention policy allowing to specify that some files are to be deleted automatically 1 day after workflow finishes, other files retained for 356 days, etc. <a href="https://github.com/reanahub/reana-client/issues/610">[rfc]</a>
+              Introduce user groups and role-based authorisation control models allowing to share workflows with colleagues.
             </p>
           </div>
         </div>
@@ -432,10 +455,10 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="https://github.com/reanahub/reana-client-go" class="card-link">Go client and stable API</a>
+              Workflow caching
             </h5>
             <p class="card-text">
-              Introduce new command-line client written in Go, to improve performance and ease of use. At the same time, stabilise the REST API versioning for future evolution.
+              Improve workflow execution caching for between-runs and between-workflows caching scenarios.
             </p>
           </div>
         </div>
@@ -444,8 +467,12 @@
         <h3>Future</h3>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Workflow sharing</h5>
-            <p class="card-text">Introduce user groups and role-based authorisation control models allowing to share workflows with colleagues.</p>
+            <h5 class="card-title">
+              <a href="https://github.com/reanahub/reana-client-go" class="card-link">Go client and stable API</a>
+            </h5>
+            <p class="card-text">
+              Introduce new command-line client written in Go to improve performance and ease of use. Stabilise the REST API versioning.
+            </p>
           </div>
         </div>
       </div>

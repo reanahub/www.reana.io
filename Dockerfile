@@ -1,6 +1,6 @@
 FROM docker.io/library/nginx:1.18
 EXPOSE 8080
-# hadolint ignore=DL3008, DL3015
+# hadolint ignore=DL3008,DL3015
 RUN apt-get -y update && \
     apt-get -y install python3-pip && \
     apt-get -y autoremove && \
@@ -8,7 +8,7 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY requirements.txt /tmp
-RUN pip3 install -r /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 COPY . /code
 WORKDIR /code
 ENV LC_ALL=C.UTF-8

@@ -1,20 +1,26 @@
-FROM docker.io/library/nginx:1.18
-EXPOSE 8080
-# hadolint ignore=DL3008,DL3015
-RUN apt-get -y update && \
-    apt-get -y install python3-pip && \
-    apt-get -y autoremove && \
-    apt-get -y clean && \
-    rm -rf /var/lib/apt/lists/*
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY requirements.txt /tmp
-RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
-COPY . /code
+# Use Python 3.8 to build static website
+FROM docker.io/library/python:3.8 as build
+
+# Copy Python requirements
 WORKDIR /code
+COPY requirements.txt /code/
+
+# Install Python dependencies
+RUN pip3 install --no-cache-dir -r /code/requirements.txt
+
+# Copy website assets
+COPY . /code
+
+# Build website
 ENV LC_ALL=C.UTF-8
-RUN lektor build -O _build && \
-    cp -a _build/* /usr/share/nginx/html/ && \
-    chmod -R a+rwx /var/run && \
-    chmod -R a+rwx /var/cache/nginx
-USER 1001
+RUN lektor build -O _build
+
+# Serve static website with nginx
+FROM docker.io/library/nginx:1.18
+
+# Copy static assets
+COPY --from=build /code/_build /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]

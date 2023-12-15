@@ -16,7 +16,12 @@ ENV LC_ALL=C.UTF-8
 RUN lektor build -O _build
 
 # Serve static website with nginx
-FROM docker.io/library/nginx:1.18
+FROM docker.io/library/nginx:1.25-alpine
+
+# Update packages
+RUN apk update && \
+    apk upgrade && \
+    rm -rf /var/cache/apk/*
 
 # Copy static assets
 COPY --from=build /code/_build /usr/share/nginx/html/

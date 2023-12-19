@@ -27,5 +27,14 @@ RUN apk update && \
 COPY --from=build /code/_build /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
+# Apply permissions needed by OpenShift
+# See https://docs.okd.io/latest/openshift_images/create-images.html#use-uid_create-images
+RUN touch /var/run/nginx.pid && \
+    chown :0 /var/run/nginx.pid && \
+    chmod g+rwx /var/run/nginx.pid && \
+    chown -R :0 /var/cache/nginx && \
+    chmod -R g+rwx /var/cache/nginx
+USER 1001
+
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]

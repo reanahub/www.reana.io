@@ -259,8 +259,8 @@ a:focus {
   padding-bottom: 20px;
 }
 .release-news img {
-  width: 100%;
-  padding: 20px;
+  width: calc(100% - 40px);
+  margin: 20px;
 }
 .release-news-body {
   padding: 0px 25px;
@@ -578,4 +578,17 @@ only screen and (max-width: 993px) {
   .flex-center-vertically {
     flex-direction: row;
   }
+}
+
+/* taken and adapted from docs.reana.io */
+.screenshot-browser-mockup {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  background:
+      url('../img/window-buttons-for-mockup.png') no-repeat left top,
+      #333; /* Dark background for browser bar */
+  padding-top: 20px; /* This assumes the window bar height is 20px. Adjust if needed */
+  background-size: auto 20px, 100%;
+  margin: 10px;
+  max-width: calc(100% - 20px);
 }

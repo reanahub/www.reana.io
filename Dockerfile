@@ -1,5 +1,5 @@
-# Use Python 3.8 to build static website
-FROM docker.io/library/python:3.8 as build
+# Use Python 3.12 to build static website
+FROM docker.io/library/python:3.12 as build
 
 # Copy Python requirements
 WORKDIR /code

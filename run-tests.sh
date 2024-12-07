@@ -51,7 +51,7 @@ check_shellcheck () {
 }
 
 check_docstyle () {
-    awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch,https://twitter.com/reanahub/lists/reana-developers,https://indico.ific.uv.es -- templates/**/*.html
+    awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch,https://twitter.com/reanahub/lists/reana-developers,https://indico.ific.uv.es,https://indico.desy.de -- templates/**/*.html
 }
 
 check_dockerfile () {

@@ -17,7 +17,7 @@ RUN lektor build -O _build && \
     rm -rf _build/.lektor
 
 # Serve static website with nginx
-FROM docker.io/library/nginx:1.25-alpine
+FROM docker.io/library/nginx:1.30.7-alpine
 
 # Update packages
 RUN apk update && \

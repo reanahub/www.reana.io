@@ -56,7 +56,7 @@ lint_commitlint() {
 }
 
 lint_docstyle() {
-    find templates -name "*.html" -exec awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch,https://twitter.com,https://indico.ific.uv.es,https://indico.desy.de -- {} +
+    find templates -name "*.html" -exec awesome_bot --allow-dupe --skip-save-results --allow-redirect --white-list https://reana.cern.ch,https://twitter.com,https://indico.ific.uv.es,https://indico.desy.de,https://www.linkedin.com -- {} +
 }
 
 lint_hadolint() {
